@@ -1,0 +1,78 @@
+---
+import Navigation from "./Navigation.astro";
+import phone from "../../public/images/image-hero.webp";
+import sideSvg1 from "../../public/images/bg-pattern-1.svg";
+import sideSvg2 from "../../public/images/bg-pattern-2.svg";
+---
+
+<header class="w-[100vw] z-10 h-[100vh]">
+  <div class="relative">
+    <img
+      class="hidden top-32 md:left-[-25%] lg:left-[-10%] md:absolute lg:absolute"
+      src={sideSvg1}
+      alt={sideSvg1}
+    />
+    <img
+      class="hidden bottom-0 md:right-[-10%] lg:right-[-3%] md:absolute lg:absolute"
+      src={sideSvg2}
+      alt={sideSvg2}
+    />
+
+    <Navigation />
+    <main class="w-[100vw]">
+      <div class="text-center pt-10 pb-28">
+        <h1
+          class="font-semibold text-white text-center w-10/12 text-4xl md:text-6xl lg:text-6xl md:w-6/12 lg:w-4/12 mx-auto">
+          Data <span class="underline underline-offset-8 decoration-[#44FFA1]"
+            >tailored</span
+          > to your needs.
+        </h1>
+
+        <button
+          class="bg-[#44FFA1] py-4 text-[#24053e] px-6 mt-10 border-2 border-[#44FFA1] hover:bg-transparent hover:text-[#44FFA1]"
+          >Learn more</button
+        >
+      </div>
+    </main>
+    <img
+      class="absolute w-[80%] bottom-[-35%] md:bottom-[-50%] md:w-[60%] lg:w-[45%] lg:bottom-[-70%] transform left-1/2 -translate-x-1/2"
+      src={phone}
+      alt=""
+    />
+  </div>
+
+  <style>
+    h1 {
+      font-family: "Fraunces", serif;
+      font-weight: 600;
+    }
+    button {
+      font-family: "Manrope", sans-serif;
+      font-weight: bold;
+    }
+
+    header::before {
+      content: "";
+      width: 200%;
+      border-bottom-left-radius: 100%;
+      border-bottom-right-radius: 100%;
+      height: 85%;
+      left: -50%;
+      position: absolute;
+      background: #24053e;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 1280px) {
+      header::before {
+        height: 50% !important;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      header::before {
+        height: 60% !important;
+      }
+    }
+  </style>
+</header>
