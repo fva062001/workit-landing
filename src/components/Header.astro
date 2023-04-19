@@ -8,7 +8,7 @@ import sideSvg2 from "../../public/images/bg-pattern-2.svg";
 <header class="w-[100vw] z-10 h-[100vh]">
   <div class="relative">
     <img
-      class="absolute w-[80%] bottom-[-35%] md:bottom-[-50%] md:w-[60%] lg:w-[40%] lg:bottom-[-60%] transform left-1/2 -translate-x-1/2"
+      class="absolute w-[80vw] bottom-[-18vh] md:bottom-[-20vh] md:w-[60vw] lg:w-[50vw] lg:bottom-[-55vh] transform left-1/2 -translate-x-1/2"
       src={phone}
       alt=""
     />
@@ -56,22 +56,22 @@ import sideSvg2 from "../../public/images/bg-pattern-2.svg";
       width: 200%;
       border-bottom-left-radius: 100%;
       border-bottom-right-radius: 100%;
-      height: 85%;
+      height: 80vh;
       left: -50%;
       position: absolute;
       background: #24053e;
       z-index: -1;
     }
 
-    @media screen and (max-width: 1280px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
       header::before {
-        height: 50% !important;
+        height: 50vh !important;
       }
     }
 
-    @media screen and (max-width: 768px) {
+    @media (min-width: 300px) and (max-width: 768px) {
       header::before {
-        height: 60% !important;
+        height: 60vh !important;
       }
     }
   </style>
