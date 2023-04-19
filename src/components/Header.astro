@@ -5,36 +5,36 @@ import sideSvg1 from "../../public/images/bg-pattern-1.svg";
 import sideSvg2 from "../../public/images/bg-pattern-2.svg";
 ---
 
-<header class="w-[100vw] z-10 h-[100vh]">
+<header class="z-10">
+  <img
+    class="absolute w-[80vw] top-[50vh] md:top-[40vh] md:w-[60vw] lg:w-[45vw] lg:top-[60vh] transform left-1/2 -translate-x-1/2"
+    src={phone}
+    alt=""
+  />
+
   <div class="relative">
     <img
-      class="absolute w-[80vw] bottom-[-18vh] md:bottom-[-20vh] md:w-[60vw] lg:w-[50vw] lg:bottom-[-55vh] transform left-1/2 -translate-x-1/2"
-      src={phone}
-      alt=""
-    />
-    <img
-      class="hidden top-32 md:left-[-25%] lg:left-[-10%] md:absolute lg:absolute"
+      class="hidden top-32 md:left-[-25%] lg:left-[-10%] absolute md:inline lg:inline"
       src={sideSvg1}
       alt={sideSvg1}
     />
     <img
-      class="hidden bottom-0 md:right-[-10%] lg:right-[-3%] md:absolute lg:absolute"
+      class="hidden bottom-0 md:right-[-10%] lg:right-[-3%] absolute md:inline lg:inline"
       src={sideSvg2}
       alt={sideSvg2}
     />
-
     <Navigation />
     <main class="w-[100vw]">
       <div class="text-center pt-10 pb-28">
         <h1
-          class="font-semibold text-white text-center w-10/12 text-4xl md:text-6xl lg:text-6xl md:w-6/12 lg:w-4/12 mx-auto">
+          class="font-semibold text-white text-center w-10/12 text-4xl md:text-6xl lg:text-8xl md:w-7/12 lg:w-6/12 mx-auto">
           Data <span class="underline underline-offset-8 decoration-[#44FFA1]"
             >tailored</span
           > to your needs.
         </h1>
 
         <button
-          class="bg-[#44FFA1] py-4 text-[#24053e] px-6 mt-10 border-2 border-[#44FFA1] hover:bg-transparent hover:text-[#44FFA1]"
+          class="bg-[#44FFA1] text-2xl py-4 text-[#24053e] px-6 mt-10 border-2 border-[#44FFA1] hover:bg-transparent hover:text-[#44FFA1]"
           >Learn more</button
         >
       </div>
@@ -73,6 +73,10 @@ import sideSvg2 from "../../public/images/bg-pattern-2.svg";
       header::before {
         height: 60vh !important;
       }
+    }
+
+    img {
+      max-inline-size: 100%;
     }
   </style>
 </header>
